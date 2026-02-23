@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Badminton Adit Store</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f2f4f8;
+}
+
+/* NAVBAR */
+nav{
+position:fixed;
+width:100%;
+background:#111;
+color:white;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+.logo{
+font-size:20px;
+font-weight:bold;
+}
+
+/* HAMBURGER */
+.hamburger{
+cursor:pointer;
+display:flex;
+flex-direction:column;
+}
+
+.hamburger span{
+width:28px;
+height:3px;
+background:white;
+margin:5px 0;
+}
+
+/* SIDE MENU */
+.side-menu{
+position:fixed;
+top:0;
+right:-260px;
+width:250px;
+height:100%;
+background:#222;
+padding-top:80px;
+transition:0.3s;
+z-index:999;
+}
+
+.side-menu a{
+display:block;
+color:white;
+padding:15px 25px;
+text-decoration:none;
+border-bottom:1px solid #333;
+}
+
+.side-menu a:hover{
+background:#00aaff;
+}
+
+.side-menu.active{
+right:0;
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:linear-gradient(to right,#000428,#004e92);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+}
+
+.hero h1{
+font-size:45px;
+}
+
+/* SECTION */
+section{
+padding:100px 8%;
+}
+
+section h2{
+text-align:center;
+margin-bottom:40px;
+font-size:30px;
+}
+
+/* CARD */
+.card-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+overflow:hidden;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+}
+
+.card-body{
+padding:15px;
+}
+
+.price{
+color:#28a745;
+font-weight:bold;
+margin:8px 0;
+}
+
+.btn{
+display:inline-block;
+padding:8px 15px;
+background:#007bff;
+color:white;
+text-decoration:none;
+border-radius:5px;
+font-size:14px;
+}
+
+.btn:hover{
+background:#0056b3;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">Badminton Adit Store</div>
+<div class="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</div>
+</nav>
+
+<div class="side-menu" id="menu">
+<a href="#raket">Raket</a>
+<a href="#jersey">Jersey</a>
+<a href="#kok">Kok</a>
+<a href="#sepatu">Sepatu</a>
+<a href="#tas">Tas</a>
+<a href="#grip">Grip</a>
+<a href="#senar">Senar</a>
+</div>
+
+<div class="hero">
+<div>
+<h1>Toko Perlengkapan Badminton Terlengkap 
+    by : Adit</h1>
+<p>Klik garis tiga di pojok kanan atas ☰</p>
+</div>
+</div>
+
+<!-- RAKET -->
+<section id="raket">
+<h2>Raket</h2>
+<div class="card-container">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e">
+<div class="card-body">
+<h3>Yonex Astrox 99</h3>
+<p class="price">Rp 2.400.000</p>
+<a href="https://shopee.co.id" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d">
+<div class="card-body">
+<h3>Li-Ning Aeronaut 9000</h3>
+<p class="price">Rp 2.100.000</p>
+<a href="https://tokopedia.com" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584467735871-8d2e7d37afb0">
+<div class="card-body">
+<h3>Victor Thruster K</h3>
+<p class="price">Rp 1.850.000</p>
+<a href="https://shopee.co.id" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- JERSEY -->
+<section id="jersey">
+<h2>Jersey</h2>
+<div class="card-container">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1520975922284-9f7b5e7e6c0b">
+<div class="card-body">
+<h3>Jersey Yonex Original</h3>
+<p class="price">Rp 250.000</p>
+<a href="https://tokopedia.com" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba3">
+<div class="card-body">
+<h3>Jersey Li-Ning Pro</h3>
+<p class="price">Rp 280.000</p>
+<a href="https://shopee.co.id" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- KOK -->
+<section id="kok">
+<h2>Kok</h2>
+<div class="card-container">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf">
+<div class="card-body">
+<h3>Kok Victor Gold</h3>
+<p class="price">Rp 350.000 / box</p>
+<a href="https://tokopedia.com" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1597764690520-7d98e1a5da08">
+<div class="card-body">
+<h3>Kok Yonex Aerosensa</h3>
+<p class="price">Rp 420.000 / box</p>
+<a href="https://shopee.co.id" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SEPATU -->
+<section id="sepatu">
+<h2>Sepatu</h2>
+<div class="card-container">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1528701800489-20be3c32c32e">
+<div class="card-body">
+<h3>Yonex Power Cushion</h3>
+<p class="price">Rp 1.200.000</p>
+<a href="https://tokopedia.com" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+<div class="card-body">
+<h3>Li-Ning Ranger</h3>
+<p class="price">Rp 980.000</p>
+<a href="https://shopee.co.id" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TAS -->
+<section id="tas">
+<h2>Tas Raket</h2>
+<div class="card-container">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1514474959185-1472d4c4e0a9">
+<div class="card-body">
+<h3>Tas Yonex 6R</h3>
+<p class="price">Rp 650.000</p>
+<a href="https://tokopedia.com" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- GRIP -->
+<section id="grip">
+<h2>Grip</h2>
+<div class="card-container">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1599050751793-ec4d45e66b90">
+<div class="card-body">
+<h3>Yonex Super Grap</h3>
+<p class="price">Rp 25.000</p>
+<a href="https://shopee.co.id" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- SENAR -->
+<section id="senar">
+<h2>Senar</h2>
+<div class="card-container">
+<div class="card">
+<img src="https://images.unsplash.com/photo-1616628182509-4e0f12e51e74">
+<div class="card-body">
+<h3>Yonex BG 66 Ultimax</h3>
+<p class="price">Rp 150.000</p>
+<a href="https://tokopedia.com" target="_blank" class="btn">Checkout</a>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<p>© 2026 Badminton Adit Store</p>
+</footer>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
